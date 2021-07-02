@@ -1,6 +1,7 @@
 $(document).ready(function () {
   $("nav .menu a").off("click").on("click", MenuClick);
   isMobile();
+  //GetNews();
 });
 
 function isMobile() {
@@ -119,4 +120,10 @@ function CarouselButtonClick(attr) {
   $(".team_go_rocket .names div:eq(" + carousel_curr + ")").removeClass();
 
   console.log(carousel_curr);
+}
+
+function GetNews() {
+  setTimeout(() => {
+    $(".news").addClass("ready");
+  }, 3000);
 }
