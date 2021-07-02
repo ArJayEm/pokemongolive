@@ -1,0 +1,450 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+body {
+  font-weight: 300;
+  background: #0c1c3e;
+  color: #18242e;
+  font-family: "Lato", sans-serif;
+  line-height: 1.4;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  min-height: 100vh;
+}
+.open::-webkit-scrollbar {
+  display: none;
+}
+.open {
+  overflow: hidden;
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+.open nav .menu .menu_open {
+  display: block;
+}
+.open nav .menu .menu_close {
+  display: none;
+}
+.open .links {
+  display: block;
+}
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(8, 34, 78, 0.9);
+  opacity: 0.98;
+  padding: 0.5em 1em;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 2fr;
+  transition: all 0.3s ease-in-out;
+}
+nav.scroll-down {
+  transform: translateY(-100%);
+}
+nav.scroll-up {
+  transform: translateY(0);
+}
+nav img {
+  height: 3em;
+}
+nav .logo {
+  grid-column: 1;
+}
+nav .menu {
+  grid-column: 2;
+}
+nav .menu .menu_open {
+  display: none;
+}
+nav .menu .menu_close {
+  display: block;
+}
+.links {
+  display: none;
+  height: 100%;
+  background-color: rgba(8, 34, 78, 0.9);
+  opacity: 0.98;
+  position: absolute;
+  top: 4em;
+  text-align: right;
+  padding: 0 1.5em;
+  z-index: 1;
+  list-style-type: none;
+  list-style: none;
+}
+.links::before {
+  content: "";
+  display: block;
+  height: 1px;
+  background: #67cba9;
+  width: calc(100vw - 48px);
+  margin: 12px auto;
+}
+.links li {
+  padding: 0.8em 0;
+}
+.links li a {
+  text-transform: uppercase;
+  color: #fff;
+  text-decoration: none;
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+  line-height: 1.3;
+  letter-spacing: 1.5px;
+}
+.main {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  padding: 0;
+  width: 100%;
+}
+@media (min-width: 0px) and (max-width: 1023px) {
+  .main {
+    margin: 0;
+  }
+}
+@media (min-width: 1024px) {
+  .main {
+    max-width: 1680px;
+    margin: 0 auto;
+  }
+}
+@media (min-width: 1440px) {
+  .main {
+    box-shadow: 1px 1px 40px #000;
+  }
+}
+.main img {
+  width: 100%;
+}
+.main .grid {
+  display: grid;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+@media (max-width: 767px) {
+  .main .grid {
+    -moz-column-gap: 24px;
+    column-gap: 24px;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 0 16px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .main .grid {
+    -moz-column-gap: 24px;
+    column-gap: 24px;
+    grid-template-columns: repeat(12, 1fr);
+    padding: 0 24px;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .main .grid {
+    -moz-column-gap: 24px;
+    column-gap: 24px;
+    grid-template-columns: repeat(12, 1fr);
+    padding: 0 24px;
+  }
+}
+@media (min-width: 1440px) {
+  .main .grid {
+    -moz-column-gap: 24px;
+    column-gap: 24px;
+    grid-template-columns: repeat(12, 1fr);
+    margin: 0 auto;
+    max-width: 1392px;
+  }
+}
+.main .grid .content .body {
+  font-size: 14;
+}
+.main .intro,
+.main .new_user,
+.main .news,
+.main .events,
+.main .catch,
+.main .adventure,
+.main .team_go_rocket,
+.main .download {
+  overflow: hidden;
+}
+@media (min-width: 0px) {
+  .main .intro .mobile,
+  .main .new_user .mobile,
+  .main .news .mobile {
+    display: block;
+  }
+  .main .intro .tablet,
+  .main .new_user .tablet,
+  .main .news .tablet {
+    display: none;
+  }
+}
+@media (min-width: 767px) {
+  .main .intro .mobile,
+  .main .new_user .mobile,
+  .main .news .mobile {
+    display: none;
+  }
+  .main .intro .tablet,
+  .main .new_user .tablet,
+  .main .news .tablet {
+    display: block;
+  }
+}
+@media (min-width: 0px) and (max-width: 1023px) {
+  .main .catch .tablet,
+  .main .adventure .tablet,
+  .main .download .tablet {
+    display: block;
+  }
+  .main .catch .desktop,
+  .main .adventure .desktop,
+  .main .download .desktop {
+    display: none;
+  }
+}
+@media (min-width: 1024px) {
+  .main .catch .tablet,
+  .main .adventure .tablet,
+  .main .download .tablet {
+    display: none;
+  }
+  .main .catch .desktop,
+  .main .adventure .desktop,
+  .main .download .desktop {
+    display: block;
+  }
+}
+.main .new_user {
+  min-height: 222px;
+}
+.main .catch {
+  display: grid;
+}
+@media (min-width: 1024px) {
+  .main .catch {
+    grid-template-columns: repeat(7, 1fr);
+  }
+  .main .catch .desktop {
+    grid-column: 1/5;
+    grid-row: 1/1;
+  }
+  .main .catch .image {
+    grid-row: 1/1;
+    z-index: -1;
+    grid-column: 4/8;
+  }
+}
+.main .catch img {
+  height: 100%;
+}
+.main .team_go_rocket {
+  display: grid;
+  position: relative;
+  height: 480px;
+  grid-template-columns: 1fr 1fr;
+}
+@media (min-width: 0px) and (max-width: 767px) {
+  .main .team_go_rocket {
+    height: 520px;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: 1fr 1fr;
+  }
+}
+.main .team_go_rocket .content_wrap {
+  height: 100%;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-column: 1/2;
+}
+@media (min-width: 0px) and (max-width: 767px) {
+  .main .team_go_rocket .content_wrap {
+    grid-template-columns: repeat(6, 1fr);
+    grid-column: 2/7;
+  }
+}
+.main .team_go_rocket .content_wrap .content {
+  position: relative;
+  column-gap: 24px;
+  color: #fff;
+  grid-template-columns: 80px 1fr;
+  grid-column: 2/3;
+  padding: 0;
+  align-self: center;
+}
+@media (min-width: 0px) and (max-width: 767px) {
+  .main .team_go_rocket .content_wrap .content {
+    padding: 40px 0;
+    align-self: start;
+    grid-column: 2/6;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .main .team_go_rocket .content_wrap .content {
+    grid-column: 2/5;
+  }
+}
+@media (min-width: 1024px) {
+}
+.main .team_go_rocket .content_wrap .content .icon {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  width: 80px;
+  height: 80px;
+  text-align: center;
+  border-radius: 50px;
+  background-color: #fff;
+  color: #da291c;
+  font-size: 3.5em;
+  font-weight: 900;
+}
+.main .team_go_rocket .content_wrap .content .title {
+  font-weight: 900;
+  grid-area: title;
+  align-self: center;
+  grid-column: 2/3;
+  grid-row: 1/2;
+}
+@media (min-width: 768px) {
+  .main .team_go_rocket .content_wrap .content .title {
+    font-size: 32px;
+    line-height: 42px;
+  }
+}
+.main .team_go_rocket .content_wrap .content .body {
+  grid-column: 1/3;
+  grid-row: 2/3;
+  margin-top: 24px;
+}
+.main .team_go_rocket img {
+  grid-row: 1/1;
+}
+.main .team_go_rocket .hidden {
+  display: none;
+}
+.main .team_go_rocket .alldevice {
+  height: 100%;
+  grid-column: 1/8;
+}
+@media (min-width: 0px) and (max-width: 767px) {
+  .main .team_go_rocket .alldevice {
+    grid-row: 1/3;
+  }
+}
+@media (min-width: 1024px) {
+  .main .team_go_rocket .alldevice {
+    grid-column: 1/3;
+  }
+}
+.main .team_go_rocket .image {
+  align-self: end;
+  grid-column: 2/3;
+}
+@media (min-width: 0px) and (max-width: 767px) {
+  .main .team_go_rocket .image {
+    grid-row: 1/3;
+    grid-column: 2/7;
+  }
+}
+.main .team_go_rocket .leaders_wrap {
+  height: inherit;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column: 2/3;
+  grid-row: 1/1;
+  padding-top: 5em;
+}
+@media (min-width: 0px) and (max-width: 767px) {
+  .main .team_go_rocket .leaders_wrap {
+    height: unset;
+    grid-column: 1/8;
+  }
+}
+.main .team_go_rocket .leaders_wrap .leaders {
+  grid-column: 2/3;
+  grid-row: 1/1;
+  color: #fff;
+  font-weight: 900;
+  font-size: 32px;
+}
+@media (min-width: 0px) and (max-width: 767px) {
+  .main .team_go_rocket .leaders_wrap .leaders {
+    grid-column: 3/4;
+  }
+}
+.main .team_go_rocket .leaders_wrap .leaders img {
+  height: 20em;
+  width: auto;
+}
+@media (min-width: 0px) and (max-width: 767px) {
+  .main .team_go_rocket .leaders_wrap .leaders img {
+    height: 15em;
+    margin-top: 5em;
+  }
+}
+.main .team_go_rocket .leaders_wrap .names {
+  grid-column: 3/4;
+  top: 50%;
+  position: absolute;
+  color: #fff;
+  font-weight: 900;
+  font-size: 32px;
+}
+@media (min-width: 0px) and (max-width: 767px) {
+  .main .team_go_rocket .leaders_wrap .names {
+    grid-column: 1/3;
+    width: 100%;
+    text-align: center;
+    top: 40%;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .main .team_go_rocket .leaders_wrap .names {
+    right: 0;
+    grid-column: 2/3;
+  }
+}
+.main .team_go_rocket .leaders_wrap .carousel_buttons {
+  display: flex;
+  position: absolute;
+  right: 40px;
+  grid-row: 1/1;
+  grid-column: 3/4;
+}
+@media (min-width: 0px) and (max-width: 767px) {
+  .main .team_go_rocket .leaders_wrap .carousel_buttons {
+    grid-column: 1/3;
+    top: 10em;
+    right: 0;
+  }
+}
+@media (min-width: 1024px) {
+}
+.main .team_go_rocket .leaders_wrap .carousel_buttons img {
+  height: 3.5em;
+  width: auto;
+  cursor: pointer;
+}
+.main .team_go_rocket .leaders_wrap .carousel_buttons img:nth-child(odd) {
+  transform: rotate(180deg);
+}
+.main .team_go_rocket .leaders_wrap .carousel_buttons img[aria-disabled="true"] {
+  opacity: 0.5;
+}
