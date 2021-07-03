@@ -1,8 +1,56 @@
+var last_top_loc = 0;
+var linksArr = [
+  { description: "Play Where You Are", link: "/en/play-where-you-are/" },
+  { description: "LEADERBOARD", link: "/en/leaderboard/" },
+  { description: "EVENTS", link: "/en/events/" },
+  { description: "UPDATES", link: "/en/post/" },
+  {
+    description: "SUPPORT",
+    link: "https://niantic.helpshift.com/a/pokemon-go/?p=web",
+  },
+  {
+    description: "Offer Redemption",
+    link: "https://rewards.nianticlabs.com/pokemongo",
+  },
+];
+
 $(document).ready(function () {
   $("nav .menu a").off("click").on("click", MenuClick);
+  SetNavLinks();
   isMobile();
   //GetNews();
 });
+
+$(document).scroll(function () {
+  var top_loc = window.scrollY;
+
+  if (top_loc < last_top_loc) {
+    $("nav").removeClass("scroll-down");
+    $("nav").addClass("scroll-up");
+  } else {
+    $("nav").removeClass("scroll-up");
+    $("nav").addClass("scroll-down");
+  }
+
+  last_top_loc = top_loc;
+});
+
+$(document).resize(function () {
+  //isMobile();
+});
+
+function SetNavLinks() {
+  var links = "";
+  for (var i = 0; i < linksArr.length; i++) {
+    links +=
+      '<li><a href="' +
+      linksArr[i].link +
+      '">' +
+      linksArr[i].description +
+      "</a></li>";
+  }
+  $("nav .links ul").html(links);
+}
 
 function isMobile() {
   var device;
@@ -31,7 +79,8 @@ function isMobile() {
   }
 
   $("body").addClass(device);
-  document.title = "Pokémon GO++ | " + device;
+  //document.title = "Pokémon GO++ | " + device;
+  console.log(device);
 
   // if (/Mobi|Android/i.test(navigator.userAgent))
   //   $("body").toggleClass("mobile");
@@ -42,21 +91,6 @@ function MenuClick() {
   //$(".links").toggleClass("open");
   $("body").toggleClass("open");
 }
-
-var last_top_loc = 0;
-$(document).on("scroll", function () {
-  var top_loc = window.scrollY;
-
-  if (top_loc < last_top_loc) {
-    $("nav").removeClass("scroll-down");
-    $("nav").addClass("scroll-up");
-  } else {
-    $("nav").removeClass("scroll-up");
-    $("nav").addClass("scroll-down");
-  }
-
-  last_top_loc = top_loc;
-});
 
 var carousel_curr = 0;
 var carousel_prev = -1;
