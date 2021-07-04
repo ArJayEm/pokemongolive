@@ -1,0 +1,92 @@
+.rocket {
+  height: 467px;
+}
+.rocket .backgrounds .background {
+  height: 100%;
+}
+.rocket .backgrounds .image {
+  width: 50%;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  height: 320px;
+  z-index: 1;
+  -o-object-position: left;
+  object-position: left;
+}
+@media (max-width: 1023px) {
+  .rocket .backgrounds .image {
+    height: 200px;
+    width: 70%;
+  }
+}
+.rocket .content_wrap {
+  position: absolute;
+}
+.rocket .content_wrap.grid {
+  -moz-column-gap: 24px;
+  column-gap: 24px;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 0 16px;
+}
+.rocket .content_wrap .content,
+.rocket .content_wrap .leaders_wrap {
+  grid-column: 1/5;
+}
+.rocket .content_wrap .content {
+  grid-row: 1/2;
+  align-self: center;
+  color: #fff;
+  padding: 40px 0;
+  position: relative;
+  z-index: 10;
+  display: grid;
+  grid-template-areas: "icon title" "body body";
+}
+.rocket .content_wrap .leaders_wrap {
+  grid-row: 2/3;
+  position: relative;
+  grid-column: 1/5;
+}
+.rocket .content_wrap .leaders_wrap .carousel_buttons {
+  position: absolute;
+  display: flex;
+  z-index: 20;
+}
+@media (max-width: 767px) {
+  .rocket .content_wrap .leaders_wrap .carousel_buttons {
+    left: -12px;
+    top: 90px;
+  }
+}
+.rocket .content_wrap .leaders_wrap .carousel_buttons img {
+  height: 50px;
+}
+.rocket .content_wrap .leaders_wrap .leaders {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  height: 250px;
+  margin-top: 27px;
+}
+.rocket .content_wrap .leaders_wrap .leaders .leader {
+  height: 100%;
+}
+.rocket .content_wrap .leaders_wrap .leaders .leader.active img {
+  transform: scale(1) translateX(0);
+  opacity: 1;
+}
+.rocket .content_wrap .leaders_wrap .leaders .leader img {
+  height: 100%;
+  opacity: 0;
+  transform: scale(0.75) translateX(-200px);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  object-position: top;
+}
+@media (max-width: 1023px) {
+  .rocket .content_wrap .leaders_wrap .leaders .leader img {
+    width: 150px;
+    margin-left: 50%;
+  }
+}

@@ -41,6 +41,7 @@ $(document).resize(function () {
 
 function SetNavLinks() {
   var links = "";
+  var footerLinks = "<div class='link'><a href='#'>Home</a></div>";
   for (var i = 0; i < linksArr.length; i++) {
     links +=
       '<li><a href="' +
@@ -48,8 +49,15 @@ function SetNavLinks() {
       '">' +
       linksArr[i].description +
       "</a></li>";
+    footerLinks +=
+      "<div class='link'><a href='" +
+      linksArr[i].link +
+      "'>" +
+      linksArr[i].description +
+      "</a></div>";
   }
   $("nav .links ul").html(links);
+  $(".footer .links").html(footerLinks);
 }
 
 function isMobile() {
@@ -111,47 +119,29 @@ function CarouselButtonClick(attr) {
 
   if (carousel_curr <= 0) {
     carousel_curr = 0;
-    $(".team_go_rocket .carousel_buttons img:eq(0)").attr(
-      "aria-disabled",
-      true
-    );
-    $(".team_go_rocket .carousel_buttons img:eq(1)").attr(
-      "aria-disabled",
-      false
-    );
+    $(".rocket .carousel_buttons img:eq(0)").attr("aria-disabled", true);
+    $(".rocket .carousel_buttons img:eq(1)").attr("aria-disabled", false);
   } else if (carousel_curr >= 2) {
     carousel_curr = 2;
-    $(".team_go_rocket .carousel_buttons img:eq(0)").attr(
-      "aria-disabled",
-      false
-    );
-    $(".team_go_rocket .carousel_buttons img:eq(1)").attr(
-      "aria-disabled",
-      true
-    );
+    $(".rocket .carousel_buttons img:eq(0)").attr("aria-disabled", false);
+    $(".rocket .carousel_buttons img:eq(1)").attr("aria-disabled", true);
   } else {
-    $(".team_go_rocket .carousel_buttons img:eq(0)").attr(
-      "aria-disabled",
-      false
-    );
-    $(".team_go_rocket .carousel_buttons img:eq(1)").attr(
-      "aria-disabled",
-      false
-    );
+    $(".rocket .carousel_buttons img:eq(0)").attr("aria-disabled", false);
+    $(".rocket .carousel_buttons img:eq(1)").attr("aria-disabled", false);
   }
 
-  $(".team_go_rocket .leaders img:eq(" + carousel_prev + ")")
+  $(".rocket .leaders img:eq(" + carousel_prev + ")")
     .removeClass()
     .addClass(prev_class)
     .delay(500)
     .hide();
-  $(".team_go_rocket .leaders img:eq(" + carousel_curr + ")")
+  $(".rocket .leaders img:eq(" + carousel_curr + ")")
     .removeClass()
     .addClass(next_class)
     .delay(500)
     .show();
-  $(".team_go_rocket .names div:eq(" + carousel_prev + ")").addClass("hidden");
-  $(".team_go_rocket .names div:eq(" + carousel_curr + ")").removeClass();
+  $(".rocket .names div:eq(" + carousel_prev + ")").addClass("hidden");
+  $(".rocket .names div:eq(" + carousel_curr + ")").removeClass();
 
   console.log(carousel_curr);
 }

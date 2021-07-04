@@ -1,0 +1,13 @@
+.adventure {
+  height: 460px;
+  padding: 30px 0;
+}
+.adventure .backgrounds {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  object-position: bottom;
+}
+.adventure .backgrounds .background {
+  height: 100%;
+}

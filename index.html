@@ -3,8 +3,21 @@
         <meta content="IE=Edge" http-equiv="X-UA-Compatible">
         <meta content="width=device-width,initial-scale=1" name="viewport">
         <link rel="stylesheet" type="text/css" href="styles/styles.css" />   
+
+        <link rel="stylesheet" type="text/css" href="styles/intro.css" />   
+        <link rel="stylesheet" type="text/css" href="styles/new_user.css" />   
+        <link rel="stylesheet" type="text/css" href="styles/news.css" />   
+        <link rel="stylesheet" type="text/css" href="styles/events.css" />   
+        <link rel="stylesheet" type="text/css" href="styles/catch.css" />   
+        <link rel="stylesheet" type="text/css" href="styles/adventure.css" />   
+        <link rel="stylesheet" type="text/css" href="styles/team_go_rocket.css" />   
+        <link rel="stylesheet" type="text/css" href="styles/download.css" />  
+        <link rel="stylesheet" type="text/css" href="styles/footer.css" />  
+
         <link rel="stylesheet" type="text/css" href="styles/animation.css" />     
+
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&amp;display=swap" media="all" onload="this.media='all'">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <script type="text/javascript" src="scripts/jquery-3.4.1.min.js"></script>
         <script type="text/javascript" src="scripts/bootstrap.min.js"></script>
         <script type="text/javascript" src="scripts/scripts.js"></script>   
@@ -22,30 +35,29 @@
         <title>Pokémon GO++</title>
     </head>
     <body>
+        <nav>
+            <div class="logo">
+                <a href="#">
+                    <img src="images/nav/logo.png"/>
+                </a>
+            </div>
+            <div class="links"><ul></ul></div>
+            <div class="menu">
+                <a href="#">
+                    <img class="menu_open" src="images/nav/menu_open.png"/>
+                    <img class="menu_close" src="images/nav/menu_close.png"/>
+                </a>
+            </div>
+            <div class="language">
+                <button class="btn">English</button>
+            </div>
+        </nav>
         <div class="main">
-            <nav>
-                <div class="logo">
-                    <a href="#">
-                        <img src="images/nav/logo.png"/>
-                    </a>
+            <div id="Intro" class="segment intro">
+                <div class="backgrounds">
+                    <img src="images/intro/bg_mobile.jpg" class="background mobile" alt="" width="1080" height="1920">
+                    <img src="images/intro/bg_tablet.jpg" class="background tablet" alt="" width="2127" height="1197">
                 </div>
-                <div class="links">
-                    <ul>
-                    </ul>
-                </div>
-                <div class="menu">
-                    <a href="#">
-                        <img class="menu_open" src="images/nav/menu_open.png"/>
-                        <img class="menu_close" src="images/nav/menu_close.png"/>
-                    </a>
-                </div>
-                <div class="language">
-                    <button class="btn">English</button>
-                </div>
-            </nav>
-            <div id="Intro" class="intro">
-                <img src="images/intro/bg_mobile.jpg" class="background mobile" alt="">
-                <img src="images/intro/bg_tablet.jpg" class="background tablet" alt="">
                 <div class="content_wrap grid">
                     <div class="content">
                         <div class="title">Welcome, Trainers!</div>
@@ -68,9 +80,11 @@
                     <a href="#News"><img src="images/intro/arrow_down.png" alt="skip intro"></a>
                 </div>
             </div>
-            <div id="New_User" class="new_user">
-                <img src="images/new_user/bg_mobile.png" class="background mobile" alt="">
-                <img src="images/new_user/bg_tablet.jpg" class="background tablet" alt="">
+            <div id="New_User" class="segment new_user">
+                <div class="backgrounds">
+                    <img src="images/new_user/bg_mobile.png" class="background mobile" alt="" width="1175" height="268">
+                    <img src="images/new_user/bg_tablet.jpg" class="background tablet" alt=""  width="1927" height="300">
+                </div>
                 <div class="content_wrap grid">
                     <div class="new_user_inner grid">
                         <div class="icon">
@@ -89,9 +103,11 @@
                     </div>
                 </div>
             </div>
-            <div id="News" class="news">
-                <img src="images/news/bg_mobile.jpg" class="background mobile" alt="">
-                <img src="images/news/bg_tablet.jpg" class="background tablet" alt="">
+            <div id="News" class="segment news">
+                <div class="backgrounds">
+                    <img src="images/news/bg_mobile.jpg" class="background mobile" alt="">
+                    <img src="images/news/bg_tablet.jpg" class="background tablet" alt="">
+                </div>
                 <div class="content_wrap grid">
                     <div class="content">
                         <div class="title">Latest News</div>
@@ -104,13 +120,18 @@
                     </div>
                 </div>
             </div>
-            <div id="Events" class="events">
-                <img src="images/events/bg_tablet.jpg" class="background tablet" alt="">
+            <div id="Events" class="segment events">
+                <div class="backgrounds">
+                    <img src="images/events/bg_tablet.jpg" class="background tablet" alt="" width="3120" height="1560">
+                    <img src="images/events/image.png" class="image" alt="" width="2272" height="2273">
+                </div>
             </div>
-            <div id="Catch" class="catch">
-                <img src="images/catch/bg_tablet.jpg" class="background tablet" alt="">
-                <img src="images/catch/bg_desktop.png" class="background desktop" alt="">
-                <img src="images/catch/image.jpg" class="image" alt=""/>
+            <div id="Catch" class="segment catch">
+                <div class="backgrounds">
+                    <img src="images/catch/bg_tablet.jpg" class="background tablet" alt="">
+                    <img src="images/catch/bg_desktop.png" class="background desktop" alt="">
+                    <img src="images/catch/image.jpg" class="image" alt=""/>
+                </div>
                 <div class="content_wrap grid">
                     <div class="content grid">
                         <div class="icon"><img src="images/catch/icon.png" alt="pokeball"></div>
@@ -120,45 +141,84 @@
                     </div>
                 </div>
             </div>
-            <div id="Adventure" class="adventure">
-                <img src="images/adventure/bg_tablet.jpg" class="background tablet" alt="">
-                <img src="images/adventure/bg_desktop.jpg" class="background desktop" alt="">
+            <div id="Adventure" class="segment adventure">
+                <div class="backgrounds">
+                    <img src="images/adventure/bg_tablet.jpg" class="background tablet" alt="">
+                    <img src="images/adventure/bg_desktop.jpg" class="background desktop" alt="">
+                </div>
             </div>
-            <div id="Team_Go_Rocket" class="team_go_rocket">
-                <img src="images/team_go_rocket/bg.jpg" class="alldevice" alt="">
-                <img src="images/team_go_rocket/image.png" class="image" alt=""/>
+            <div id="Rocket" class="segment rocket">
+                <div class="backgrounds">
+                    <img src="images/team_go_rocket/bg.jpg" class="background" alt="">
+                    <img src="images/team_go_rocket/image.png" class="image" alt=""/>
+                </div>
                 <div class="content_wrap grid">
                     <div class="content grid">
                         <div class="icon">R</div>
                         <div class="title">Team GO Rocket</div>
                         <div class="body">Team GO Rocket has invaded the world of Pokémon GO! Whether you’re working on Special Research or just trying to rescue Shadow Pokémon, you can challenge Team GO Rocket and foil their plans.</div>
                     </div>
-                </div>
-                <div class="leaders_wrap grid">
-                    <div class="leaders">
-                        <img src="images/team_go_rocket/arlo.png" class="" alt="arlo"/>
-                        <img src="images/team_go_rocket/cliff.png" class="" alt="cliff"/>
-                        <img src="images/team_go_rocket/sierra.png" class="" alt="sierra"/>
-                    </div>
-                    <div class="names">
-                        <div>Arlo</div>
-                        <div class="hidden">Cliff</div>
-                        <div class="hidden">Sierra</div>
-                    </div>
-                    <div class="carousel_buttons">
-                        <img onclick="CarouselButtonClick('left');" src="images/team_go_rocket/carousel_button.png" aria-disabled="true" alt="carousel_button_left"/>
-                        <img onclick="CarouselButtonClick('right');" src="images/team_go_rocket/carousel_button.png" alt="carousel_button_right"/>
+                    <div class="leaders_wrap grid">
+                        <div class="carousel_buttons">
+                            <img onclick="CarouselButtonClick('left');" src="images/team_go_rocket/carousel_button.png" aria-disabled="true" alt="carousel_button_left"/>
+                            <img onclick="CarouselButtonClick('right');" src="images/team_go_rocket/carousel_button.png" alt="carousel_button_right"/>
+                        </div>
+                        <div class="leaders">
+                            <div id="Arlo" class="leader active">
+                                <img src="images/team_go_rocket/arlo.png" class="" alt="arlo"/>
+                                <div class="name">Arlo</div>
+                            </div>
+                            <div id="Cliff" class="leader">
+                                <img src="images/team_go_rocket/cliff.png" class="" alt="cliff"/>
+                                <div class="name">Cliff</div>
+                            </div>
+                            <div id="Sierra" class="leader">
+                                <img src="images/team_go_rocket/sierra.png" class="" alt="sierra"/>
+                                <div class="name">Sierra</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div id="Download" class="download">
-                <img src="images/download/bg_tablet.jpg" class="background tablet" alt="">
-                <img src="images/download/bg_desktop.jpg" class="background desktop" alt="">
+            <div id="Download" class="segment download">
+                <div class="backgrounds">
+                    <img src="images/download/bg_tablet.jpg" class="background tablet" alt="">
+                    <img src="images/download/bg_desktop.jpg" class="background desktop" alt="">
+                </div>
+                <div class="grid">
+                    <div class="content">
+                        <div class="logo">
+                            <img src="images/nav/logo.png" alt="logo">
+                        </div>
+                        <div class="icon">
+                            <img src="images/download/icon.png" alt="icon">
+                        </div>
+                        <div class="title">Get Up and GO!</div>
+                        <div class="body">Download Today</div>
+                        <div class="badges">
+                            <div class="badge">
+                                <a href="https://apps.apple.com/vc/app/pok%C3%A9mon-go/id1094591345"><img src="images/download/apple.svg" alt="apple"></a></div>
+                            <div class="badge">
+                                <a href="https://play.google.com/store/apps/details?id=com.nianticlabs.pokemongo"><img src="images/download/google.png" alt="google"></a></div>
+                            <div class="badge">
+                                <a href="https://galaxystore.samsung.com/detail/com.nianticlabs.pokemongo.ares"><img src="images/download/samsung.png" alt="samsung"></a></div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div id="Footer" class="footer">
-                <img src="images/" class="background mobile" alt="">
-                <img src="images/" class="background tablet" alt="">
-                <img src="images/" class="background desktop" alt="">
+            <div id="Footer" class="segment footer">
+                <div class="content_wrap grid">
+                    <div class="content">
+                        <div class="links"></div>
+                        <div class="socials">
+                            <div class="social"><a href="https://twitter.com/PokemonGoApp" class="fa fa-twitter" target="_blank" rel="noopener noreferrer" role="button" aria-label="Twitter"></a></div>
+                            <div class="social"><a href="https://www.instagram.com/pokemongoapp/" class="fa fa-instagram" target="_blank" rel="noopener noreferrer" role="button" aria-label="Instagram"></a></div>
+                            <div class="social"><a href="https://www.facebook.com/PokemonGO/" class="fa fa-facebook-f" target="_blank" rel="noopener noreferrer" role="button" aria-label="Facebook"></a></div>
+                            <div class="social"><a href="https://www.youtube.com/channel/UCA698bls2pjQyiqP9N-iaeg" class="fa fa-youtube-play" target="_blank" rel="noopener noreferrer" role="button" aria-label="Youtube"></a></div>
+                        </div>
+                        <div class="logos"></div>
+                    </div>
+                </div>
             </div>
         </div>
     </body>

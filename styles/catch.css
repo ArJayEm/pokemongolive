@@ -1,0 +1,22 @@
+.catch .backgrounds {
+  height: 650px;
+}
+.catch .backgrounds .background,
+.catch .backgrounds .image {
+  right: 0;
+  top: 0;
+}
+@media (max-width: 1023px) {
+}
+.catch .backgrounds .background {
+  width: 100%;
+  height: 40%;
+}
+.catch .backgrounds .image {
+  width: 100%;
+  height: 60%;
+  bottom: 0;
+  top: auto;
+}
+@media (max-width: 1023px) {
+}

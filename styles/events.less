@@ -1,0 +1,25 @@
+.events {
+  height: 617px;
+  overflow: hidden;
+
+  .backgrounds {
+
+    img {
+      height: inherit;
+    }
+
+    .image {
+        position: absolute !important;
+        // top: 0;
+        // z-index: 3;
+
+        @media (max-width: 1023px) {
+          left: calc(50% - 500px);
+          top: calc(75% - 500px);
+          height: 1000px;
+          width: 1000px;
+          max-width: 1000px;
+        }
+    }
+  }
+}

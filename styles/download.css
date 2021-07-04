@@ -1,0 +1,107 @@
+@media (max-width: 1023px) {
+  .download {
+    padding: 40px 0;
+  }
+}
+.download .backgrounds {
+  height: 436px !important;
+}
+.download .backgrounds img {
+  height: 100%;
+}
+@media (max-width: 767px) {
+  .download .grid {
+    -moz-column-gap: 24px;
+    column-gap: 24px;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 0 16px;
+  }
+  .download .grid .content {
+    display: grid;
+    -moz-column-gap: 24px;
+    column-gap: 24px;
+    position: relative;
+    align-content: center;
+    z-index: 1;
+  }
+  .download .grid .content .logo {
+    grid-area: logo;
+  }
+  .download .grid .content .icon {
+    grid-area: icon;
+    display: flex;
+    align-items: center;
+  }
+  .download .grid .content .title,
+  .download .grid .content .body {
+    font-weight: 900;
+    color: #fff;
+  }
+  .download .grid .content .title {
+    grid-area: title;
+  }
+  .download .grid .content .body {
+    grid-area: body;
+  }
+  .download .grid .content .badges {
+    grid-area: badges;
+    margin-top: 24px;
+    display: flex;
+    -moz-column-gap: 12px;
+    column-gap: 12px;
+  }
+  .download .grid .content .badges .badge {
+    flex-shrink: 0;
+  }
+  .download .grid .content .badges .badge a {
+    display: block;
+  }
+  .download .grid .content .badges .badge a img {
+    height: 40px;
+    width: auto;
+  }
+}
+@media (max-width: 767px) and (max-width: 767px) {
+  .download .grid .content {
+    grid-column-start: 1;
+    grid-column-end: span 4;
+    grid-template-areas: "logo icon" "title title" "body body" "badges badges";
+    grid-template-columns: auto 1fr;
+  }
+}
+@media (max-width: 767px) and (max-width: 767px) {
+  .download .grid .content .logo {
+    margin-left: calc(50vw - 150px);
+    width: 150px;
+  }
+}
+@media (max-width: 767px) and (max-width: 1023px) {
+  .download .grid .content .icon {
+    width: 96px;
+  }
+}
+@media (max-width: 767px) and (max-width: 767px) {
+  .download .grid .content .title,
+  .download .grid .content .body {
+    font-size: 28px;
+    line-height: 34px;
+  }
+}
+@media (max-width: 767px) and (max-width: 1023px) {
+  .download .grid .content .title,
+  .download .grid .content .body {
+    text-align: center;
+  }
+}
+@media (max-width: 767px) and (max-width: 1023px) {
+  .download .grid .content .title {
+    margin-top: 24px;
+  }
+}
+@media (max-width: 767px) and (max-width: 767px) {
+  .download .grid .content .badges {
+    flex-direction: column;
+    align-items: center;
+    row-gap: 12px;
+  }
+}

@@ -1,0 +1,9 @@
+.intro {
+  max-height: 800px;
+}
+.intro .backgrounds {
+  position: relative;
+}
+.intro .backgrounds .background {
+  max-height: 800px;
+}
